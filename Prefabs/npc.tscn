@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://be8136h16rre2"]
+
+[ext_resource type="Texture2D" uid="uid://cxh24lwhnvadf" path="res://Sprites/8 direction walk panda spritesheet.png" id="1_7be2b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0audg"]
+radius = 4.12311
+
+[node name="NPC" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.819608, 0, 1)
+texture = ExtResource("1_7be2b")
+hframes = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_0audg")
