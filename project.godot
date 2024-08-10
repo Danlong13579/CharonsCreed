@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="CharonsCreed"
-run/main_scene="res://Levels/TestScene.tscn"
+run/main_scene="res://Lights/Levels/TestScene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=960
-window/size/viewport_height=540
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/mode=3
 window/size/initial_position_type=2
 window/size/window_width_override=2560
@@ -64,7 +64,9 @@ dash={
 
 [layer_names]
 
-2d_physics/layer_1="player_collision"
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="NPC"
 
 [rendering]
 

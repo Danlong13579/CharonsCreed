@@ -1,17 +1,15 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 var moveSpeed := 6000
 var dashSpeed := 20000
 const dashDuration = 0.2
+
+
  
 @onready var sprite = $Sprite2D
 @onready var animation_tree = $AnimationTree
 @onready var animation_player = $AnimationPlayer
 @onready var dash = $Dash
-@onready var health_timmer = $HealthTimmer
-
-func _ready():
-	health_timmer.start()
 
 func _physics_process(delta):
 	dash.set_cooldown(1.0)
@@ -36,8 +34,3 @@ func transition_animation(inputDirection: Vector2):
 		animation_tree.set("parameters/Walk/blend_position", inputDirection)
 	else:
 		animation_tree.get("parameters/playback").travel("Idle")
-
-
-func _on_health_timmer_timeout():
-	print("health gained")
-	pass # Replace with function body.

@@ -416,8 +416,9 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 [sub_resource type="CircleShape2D" id="CircleShape2D_j7ksr"]
 radius = 4.52769
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_yw5ax")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -431,8 +432,8 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_im3h0")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(-0.000548601, 0.556802)
-parameters/Walk/blend_position = Vector2(-0.278653, 0.0532916)
+parameters/Idle/blend_position = Vector2(0.869832, -0.808917)
+parameters/Walk/blend_position = Vector2(-0.627308, 0.682353)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_grif4")
@@ -443,8 +444,3 @@ position = Vector2(0, 10)
 shape = SubResource("CircleShape2D_j7ksr")
 
 [node name="Dash" parent="." instance=ExtResource("3_iw73f")]
-
-[node name="HealthTimmer" type="Timer" parent="."]
-wait_time = 5.0
-
-[connection signal="timeout" from="HealthTimmer" to="." method="_on_health_timmer_timeout"]
