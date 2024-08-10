@@ -1433,7 +1433,7 @@ shader = ExtResource("8_7alb4")
 [sub_resource type="Resource" id="Resource_2hg5c"]
 script = ExtResource("12_etjmc")
 title = "Random Stoat"
-main_text = Array[String](["Random ", "", "", ""])
+main_text = Array[String](["Random new text", "", "", ""])
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
