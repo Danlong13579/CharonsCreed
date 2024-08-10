@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://be8136h16rre2"]
+[gd_scene load_steps=6 format=3 uid="uid://be8136h16rre2"]
 
 [ext_resource type="Script" path="res://Prefabs/friendly_npc.gd" id="1_1i4nb"]
-[ext_resource type="Texture2D" uid="uid://cxh24lwhnvadf" path="res://Sprites/8 direction walk panda spritesheet.png" id="1_7be2b"]
 [ext_resource type="FontFile" uid="uid://cx8l5nxy74she" path="res://Fonts/novem___.ttf" id="4_52lbh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xipb1"]
@@ -22,7 +21,6 @@ script = ExtResource("1_1i4nb")
 dialog_fade_time = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_7be2b")
 hframes = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -49,7 +47,6 @@ text = "Test font for game"
 label_settings = SubResource("LabelSettings_q4k7h")
 
 [node name="DialogTimer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_body_entered"]
