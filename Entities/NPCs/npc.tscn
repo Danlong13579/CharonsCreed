@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://be8136h16rre2"]
+
+[ext_resource type="Script" path="res://Entities/NPCs/friendly_npc.gd" id="1_1i4nb"]
+[ext_resource type="FontFile" uid="uid://cx8l5nxy74she" path="res://Assets/Fonts/novem___.ttf" id="4_52lbh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xipb1"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pdcg"]
+radius = 33.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_q4k7h"]
+font = ExtResource("4_52lbh")
+shadow_size = 0
+
+[node name="NPC" type="CharacterBody2D"]
+texture_filter = 1
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_1i4nb")
+dialog_fade_time = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+hframes = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_xipb1")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 8)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3pdcg")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -31.0
+offset_top = -24.0
+offset_right = 113.0
+offset_bottom = -0.999996
+scale = Vector2(0.42317, 0.42317)
+text = "Test font for game"
+label_settings = SubResource("LabelSettings_q4k7h")
+
+[node name="DialogTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_body_exited"]
+[connection signal="timeout" from="DialogTimer" to="." method="_on_dialog_timer_timeout"]
