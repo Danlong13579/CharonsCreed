@@ -292,4 +292,8 @@ tile_set = SubResource("TileSet_btp7h")
 position = Vector2(16, 0)
 tile_set = SubResource("TileSet_btp7h")
 
-[node name="Player" parent="TileMapLayer" instance=ExtResource("1_fgnmt")]
+[node name="Player" parent="." instance=ExtResource("1_fgnmt")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(4.2039e-45, 0)

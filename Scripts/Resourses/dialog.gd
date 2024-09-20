@@ -11,4 +11,3 @@ class_name Dialog extends Resource
 #@export_group("Dialog Choices")
 #@export var choice_title: Array[String]
 #@export var choices: Array[Dialog]
-
