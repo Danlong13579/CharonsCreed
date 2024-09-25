@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-var moveSpeed := 6000
+var moveSpeed := 12000
 var dashSpeed := 20000
 const dashDuration = 0.2
 
