@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7s8ps7n0evxb"]
-
-[ext_resource type="Texture2D" uid="uid://bkesbdpp3onwq" path="res://Levels/Pandas/tree_1.png" id="1_ybo2c"]
-
-[node name="TreeProp" type="Sprite2D"]
-y_sort_enabled = true
-texture = ExtResource("1_ybo2c")
-offset = Vector2(0, -76)
-hframes = 4
