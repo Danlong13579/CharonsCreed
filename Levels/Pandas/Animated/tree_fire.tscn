@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://4u2lvfglt6pk"]
+
+[ext_resource type="Texture2D" uid="uid://cd3r1fy5rodve" path="res://Levels/Pandas/Animated/tree_fire_1.png" id="1_4j17n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw1rf"]
+atlas = ExtResource("1_4j17n")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wohlp"]
+atlas = ExtResource("1_4j17n")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc6hs"]
+atlas = ExtResource("1_4j17n")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5syj"]
+atlas = ExtResource("1_4j17n")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58gvw"]
+atlas = ExtResource("1_4j17n")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyauf"]
+atlas = ExtResource("1_4j17n")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ng2id"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw1rf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wohlp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc6hs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5syj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58gvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyauf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ptdj"]
+radius = 16.0
+
+[node name="TreeFire" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_ng2id")
+autoplay = "default"
+frame_progress = 0.176309
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-14, -18)
+shape = SubResource("CircleShape2D_3ptdj")

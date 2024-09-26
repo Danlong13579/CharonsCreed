@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnb8fqvdjyfhq"]
+[gd_scene load_steps=10 format=3 uid="uid://dnb8fqvdjyfhq"]
 
 [ext_resource type="Script" path="res://Entities/Red/player.gd" id="1_acjq4"]
+[ext_resource type="Script" path="res://Resources/StateMachines/state_machine.gd" id="3_wech3"]
 [ext_resource type="Texture2D" uid="uid://dw4qsrjxhmgkf" path="res://Entities/Red/Red_Export.png" id="4_5x5pt"]
+[ext_resource type="Script" path="res://Entities/Red/player_idle.gd" id="4_lo112"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j7ksr"]
 radius = 9.0
@@ -56,6 +58,7 @@ script = ExtResource("1_acjq4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_j7ksr")
+debug_color = Color(3.08037e-06, 0.592236, 0.742637, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")
@@ -69,3 +72,9 @@ position = Vector2(0, -24)
 texture = SubResource("AtlasTexture_bo2hi")
 hframes = 8
 vframes = 3
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_wech3")
+
+[node name="PlayerIdle" type="Node" parent="StateMachine"]
+script = ExtResource("4_lo112")

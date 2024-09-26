@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://d027jr7gu5dch"]
+[gd_scene load_steps=9 format=4 uid="uid://d027jr7gu5dch"]
 
 [ext_resource type="Texture2D" uid="uid://bosiecytbm5c4" path="res://Levels/Pandas/terrains.png" id="1_472rn"]
 [ext_resource type="PackedScene" uid="uid://dnb8fqvdjyfhq" path="res://Entities/Red/player.tscn" id="1_fgnmt"]
 [ext_resource type="Texture2D" uid="uid://rfcudw3nducj" path="res://Levels/Pandas/props.png" id="2_rjbh3"]
+[ext_resource type="PackedScene" uid="uid://4u2lvfglt6pk" path="res://Levels/Pandas/Animated/tree_fire.tscn" id="4_w8lou"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_xs8tt"]
 tile_data = PackedInt32Array(0, 65537, 3, 65536, 65537, 0, 131072, 65537, 0, 196608, 1, 2, 1, 196609, 0, 65537, 131073, 1, 131073, 131073, 1, 196609, 65537, 2, 2, 196609, 0, 65538, 131073, 1, 131074, 131073, 1, 196610, 65537, 2, 3, 1, 0, 65539, 196609, 2, 131075, 196609, 2, 196611, 196609, 3)
@@ -297,3 +298,6 @@ tile_set = SubResource("TileSet_btp7h")
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
 position = Vector2(4.2039e-45, 0)
+
+[node name="TreeFire" parent="." instance=ExtResource("4_w8lou")]
+position = Vector2(117, 27)
