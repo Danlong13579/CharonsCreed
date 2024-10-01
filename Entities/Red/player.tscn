@@ -236,6 +236,8 @@ atlas = ExtResource("4_5x5pt")
 region = Rect2(0, 0, 384, 144)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_as_relative = false
+y_sort_enabled = true
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_acjq4")
