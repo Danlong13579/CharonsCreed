@@ -17,5 +17,6 @@ func _physics_process(delta):
 		
 	var speed = dashSpeed if dash.is_dashing() else moveSpeed
 	
-	velocity = inputDirection * speed * delta
+	var target_velocity = inputDirection * speed * delta
+	velocity = velocity.lerp(target_velocity, 0.25)
 	move_and_slide()
