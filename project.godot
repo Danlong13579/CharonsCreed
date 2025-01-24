@@ -24,8 +24,8 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/mode=3
-window/size/initial_screen=2
 window/stretch/mode="canvas_items"
+window/snap/snap_2d_transforms_to_pixel=false
 
 [editor_plugins]
 
@@ -86,8 +86,11 @@ interact={
 
 [physics]
 
+common/physics_ticks_per_second=200
 common/physics_interpolation=true
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/default_filters/use_nearest_mipmap_filter=true
+2d/snap/snap_2d_transforms_to_pixel=true
